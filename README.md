@@ -1,1 +1,0 @@
-# IFT1005-Projet-1-Hamza-Tahfi-Jackson-Ho-
