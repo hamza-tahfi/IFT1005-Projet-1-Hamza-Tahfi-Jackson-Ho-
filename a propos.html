@@ -4,35 +4,36 @@
   <!-- Étudiants : Tahfi Hamza (20337357) / Jackson Ho -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Accueil — Projet</title>
+  <title>Nom - À propos</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="page-accueil">
+<body class="page-a-propos">
   <a class="skip-link" href="#contenu">Aller au contenu</a>
 
   <header class="site-header">
     <img src="images/logo.png" alt="Logo du site" class="logo">
-    <h1>Culture automobile</h1>
+    <h1>À propos</h1>
     <nav class="site-nav" aria-label="Navigation principale">
-      <ul>
-        <li><a class="actif" href="index.html">Accueil</a></li>
-        <li><a href="a-propos.html">À propos</a></li>
-        <li><a href="histoire.html">Histoire</a></li>
-        <li><a href="cultures.html">Cultures</a></li>
-        <li><a href="techno-actus.html">Technologies / Actus</a></li>
-      </ul>
+        <a href="index.html">Accueil</a></li>
+        <a class="actif" href="a-propos.html">À propos</a></li>
+        <a href="histoire.html">Histoire</a></li>
+        <a href="cultures.html">Cultures</a></li>
+        <a href="techno-actus.html">Technologies / Actus</a></li>
     </nav>
-    <div class="badge-css" aria-hidden="true">TH</div>
   </header>
 
   <main id="contenu" class="site-main">
-    <!-- TODO: Brève description du site + paragraphes + au moins une image flottante -->
+    <!-- TODO: Public ciblé + explication des choix de design (couleurs, disposition, accessibilité).
+         TODO: Liste NON numérotée des sources Web de TOUTES les images utilisées (pas Google Images). -->
+    <section aria-labelledby="sources-titre">
+      <h2 id="sources-titre">Sources des images</h2>
+      <ul class="sources-images">
+        <!-- <li><a href="URL-DE-LA-SOURCE">Nom de la source</a></li> -->
+      </ul>
+    </section>
   </main>
-
   <footer class="site-footer">
-    <p><strong>Tahfi Hamza</strong> & <strong>Jackson Ho</strong> — Dernière mise à jour :
-      <time datetime="2025-11-02">2 novembre 2025</time>
-    </p>
+    <p><strong>Tahfi Hamza</strong> & <strong>Jackson Ho</strong></p>
   </footer>
 </body>
 </html>
