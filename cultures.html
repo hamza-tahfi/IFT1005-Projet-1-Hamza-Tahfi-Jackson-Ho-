@@ -15,23 +15,167 @@
       <h1>Cultures automobiles</h1>
       <nav class="site-nav" aria-label="Navigation principale">
         <a href="index.html">Accueil</a>
-        <a href="a_propos.html">À propos</a>
         <a href="histoire.html">Histoire</a>
-        <a class="actif" href="cultures.html">Cultures</a>
+        <a class="actif" href="culture.html">Cultures</a>
         <a href="actualite.html">Technologies / Actus</a>
+        <a href="a_propos.html">À propos</a>
       </nav>
     </header>
 
-    <main id="contenu" class="site-main">
-      <!-- TODO: Au moins une liste numérotée avec une liste imbriquée de type différent.
-         TODO: Intégrer une petite figure SVG personnalisée (pas celle vue en démo). Exemple:
-         <svg class="mini-svg" viewBox="0 0 120 60" aria-label="Icône personnalisée">
-          -->
-      <!-- formes SVG ici: <rect>, <circle>, <path>, etc. -->
-    </main>
+ <main id="contenu" class="site-main">
+    <!-- Intro + image circulaire -->
+    <section aria-labelledby="intro">
+      <h2 id="intro" class="sr-only">Introduction</h2>
+      <img
+        src="images/cultures-rassemblement.jpg"
+        alt="Rassemblement, vue d’ensemble"
+        class="cercle"
+        width="360" height="360">
+      <p>
+        Les communautés auto sont multiples : <strong>JDM</strong>, <strong>muscle cars</strong>,
+        <strong>rallye</strong>, <strong>F1</strong>, <strong>stance/tuning</strong>,
+        <strong>off-road/overlanding</strong>, <strong>youngtimers/classic</strong>.
+        Cette page présente leurs <em>valeurs</em>, <em>symboles</em>, <em>événements</em> et <em>codes visuels</em>.
+      </p>
+    </section>
 
-    <footer class="site-footer">
-      <p><strong>Tahfi Hamza</strong> & <strong>Jackson Ho</strong></p>
-    </footer>
+    <!-- Liste numérotée + sous-listes (type différent) -->
+    <section aria-labelledby="panorama">
+      <h2 id="panorama">Les scènes majeures (panorama)</h2>
+
+      <ol>
+        <li>
+          <h3>JDM (Japanese Domestic Market)</h3>
+          <ul>
+            <li><strong>ADN</strong> : culture japonaise route &amp; circuit, préparation propre/équilibrée.</li>
+            <li><strong>Esthétique</strong> : jantes légères, carrosseries sobres, attention aux détails.</li>
+            <li><strong>Événements</strong> : meets nocturnes, time attack, drift.</li>
+            <li><strong>Modèles</strong> : Nissan Skyline, Toyota Supra, Mazda RX-7.</li>
+          </ul>
+        </li>
+
+        <li>
+          <h3>Muscle cars (US)</h3>
+          <ul>
+            <li><strong>ADN</strong> : gros V8, couple, ligne droite, sonorité marquée.</li>
+            <li><strong>Esthétique</strong> : carrosseries 60–70s, bandes, couleurs vives.</li>
+            <li><strong>Événements</strong> : drag strips, cars &amp; coffee.</li>
+            <li><strong>Modèles</strong> : Ford Mustang, Dodge Charger, Chevy Camaro.</li>
+          </ul>
+        </li>
+
+        <li>
+          <h3>Rallye</h3>
+          <ul>
+            <li><strong>ADN</strong> : performance sur routes fermées/terre/neige.</li>
+            <li><strong>Esthétique</strong> : garde au sol adaptée, protections, phares additionnels.</li>
+            <li><strong>Événements</strong> : rallyes régionaux, spéciales; spectateurs en zones dédiées.</li>
+            <li><strong>Modèles</strong> : Subaru Impreza WRX, Lancia Delta, Ford Fiesta R5.</li>
+          </ul>
+        </li>
+
+        <li>
+          <h3>F1 &amp; sports prototypes (fan culture)</h3>
+          <ul>
+            <li><strong>ADN</strong> : haute technologie, stratégie, communautés de fans.</li>
+            <li><strong>Esthétique</strong> : livrées d’écuries, merchandising.</li>
+            <li><strong>Événements</strong> : viewing parties, Grands Prix.</li>
+            <li><strong>Symboles</strong> : drapeaux, numéros, couleurs d’écurie.</li>
+          </ul>
+        </li>
+
+        <li>
+          <h3>Stance / Tuning</h3>
+          <ul>
+            <li><strong>ADN</strong> : personnalisation esthétique, hauteur et carrossage.</li>
+            <li><strong>Esthétique</strong> : suspensions réglées, kits, finitions soignées.</li>
+            <li><strong>Événements</strong> : show &amp; shine, concours visuels.</li>
+          </ul>
+        </li>
+
+        <li>
+          <h3>Off-road / Overlanding</h3>
+          <ul>
+            <li><strong>ADN</strong> : exploration, autonomie, fiabilité.</li>
+            <li><strong>Esthétique</strong> : pneus TT, galeries, bidons, tentes de toit.</li>
+            <li><strong>Événements</strong> : sorties clubs, trails, bivouacs.</li>
+            <li><strong>Modèles</strong> : Jeep Wrangler, Toyota Land Cruiser, Land Rover Defender.</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Codes & symboles + image flottante -->
+    <section aria-labelledby="codes">
+      <h2 id="codes">Codes, symboles et étiquette</h2>
+      <img
+        src="images/cultures-stickers.jpg"
+        alt="Photo d’un pare-brise avec badges de club et stickers d’événements"
+        class="img-float-gauche"
+        width="320" height="214">
+      <ul>
+        <li><strong>Symboles visuels</strong> : stickers clubs/écuries, plaques, numéros, drapeaux.</li>
+        <li><strong>Étiquette</strong> : respect des lieux/voisinage; sécurité des spectateurs; pas de burnouts sur route ouverte.</li>
+        <li><strong>Look &amp; son</strong> : jantes/hauteur (stance), livrées (F1), feux additionnels (rallye), échappement (muscle/JDM).</li>
+      </ul>
+    </section>
+
+    <!-- Événements & médias -->
+    <section aria-labelledby="events">
+      <h2 id="events">Événements &amp; médias</h2>
+      <p>
+        <strong>Formats</strong> : meets (informels), salons (expos), track days (circuit), rallyes,
+        viewing parties F1. <strong>Réseaux &amp; forums</strong> : groupes d’annonces, galeries photo,
+        calendriers communautaires. <strong>Conseil sécurité</strong> : vérifier les autorisations/assurances
+        quand on expose ou modifie un véhicule.
+      </p>
+    </section>
+
+    <!-- Mini glossaire -->
+    <section aria-labelledby="glossaire">
+      <h2 id="glossaire">Mini glossaire</h2>
+      <dl>
+        <dt>JDM</dt><dd>Véhicules/esthétiques du marché japonais.</dd>
+        <dt>Youngtimer</dt><dd>Véhicules 80–90s (parfois 2000s), entre occasion et collection.</dd>
+        <dt>Stance</dt><dd>Réglage esthétique de la hauteur et du carrossage pour un rendu visuel.</dd>
+        <dt>ADAS</dt><dd>Aides à la conduite (ex. régulateur adaptatif, maintien de voie).</dd>
+        <dt>Overlanding</dt><dd>Voyages longue distance en autonomie (tout-terrain + camping).</dd>
+      </dl>
+    </section>
+
+    <!-- Mini figure SVG originale -->
+    <section aria-labelledby="svg-icone">
+      <h2 id="svg-icone">Icône de scène (SVG)</h2>
+      <p class="clair">Pictogramme simple “casque + drapeau à damier”.</p>
+      <svg class="mini-svg" viewBox="0 0 120 60" role="img" aria-label="Icône scène auto : casque et drapeau">
+        <!-- Casque -->
+        <circle cx="28" cy="30" r="16"></circle>
+        <rect x="18" y="24" width="20" height="8" rx="2"></rect>
+        <!-- Drapeau -->
+        <rect x="70" y="14" width="2" height="32"></rect>
+        <path d="M72 14 C86 18, 94 10, 106 14 L106 30 C92 26, 84 34, 72 30 Z"></path>
+        <!-- Damier minimal -->
+        <rect x="86" y="18" width="6" height="4"></rect>
+        <rect x="98" y="22" width="6" height="4"></rect>
+        <rect x="92" y="26" width="6" height="4"></rect>
+      </svg>
+    </section>
+
+    <!-- Appel à participation -->
+    <section aria-labelledby="participation">
+      <h2 id="participation">Partager vos trouvailles</h2>
+      <p>
+        Vous avez des photos d’événements ou de véhicules locaux (avec autorisation) ?
+        Indiquez-les avec leur <strong>source exacte</strong> pour enrichir la galerie
+        (liste complète des sources dans <a href="a-propos.html">À propos</a>).
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p><strong>Tahfi Hamza</strong> &amp; <strong>Jackson Ho</strong> — Dernière mise à jour :
+      <time datetime="2025-11-02">2 novembre 2025</time>
+    </p>
+  </footer>
   </body>
 </html>
