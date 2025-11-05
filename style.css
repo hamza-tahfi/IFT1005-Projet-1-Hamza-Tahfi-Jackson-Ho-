@@ -2,6 +2,8 @@
    Étudiants : Tahfi Hamza (20337357) / Jackson Ho
    Fichier CSS unique pour tout le site
    ========================================================= */
+<<<<<<< HEAD
+=======
 
 /* Site Navigation Bar */
 .site-nav {
@@ -37,3 +39,5 @@ a.actif {
 .site-nav a:hover.actif {
   background-color: #a1a1a1;
 }
+
+>>>>>>> 42f8d53157b670a02ba5fdc1241a6b36201376a5
