@@ -1,63 +1,93 @@
 /* =========================================================
    Étudiants : Tahfi Hamza (20337357) / Jackson Ho
-   Fichier CSS unique pour tout le site
+   Fichier CSS unique – Motorscape
    ========================================================= */
-.site-main {
-  background-color: lightgray;
+
+/* Polices Google */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@500;700&family=Lato:wght@400;700&family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+/* Base & typos */
+html, body { margin: 0; padding: 0; }
+body{
+  background-color: #F1E6D2;                    /* FOND CRÈME partout */
+  color: #141414;
+  font-family: Lato, "Open Sans", Roboto, system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+}
+img{ max-width:100%; height:auto; }
+
+/* Titres */
+h1, h2, h3, h4{
+  font-family: Oswald, "Bebas Neue", Impact, "Haettenschweiler", "Arial Narrow", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #1F2C34;                               /* navy */
+  margin-top: 0;
 }
 
-/* Site Navigation Bar */
+/* Main wrapper */
+.site-main { background-color: #F1E6D2; }       /* ancien : lightgray */
+
+/* NAVIGATION */
 .site-nav {
   height: 100px;
-  background-color: white;
-  border: 2px solid black;
+  background-color: #1F2C34;                    /* navy */
+  border: 0;                                    /* enlève cadre noir */
   display: flex;
   flex-direction: row;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.15);
 }
 
+/* Liens */
 .site-nav a {
   font-size: larger;
   font-weight: bold;
-  text-decoration: none;
   height: 100%;
   min-width: 10%;
   align-content: center;
   text-align: center;
-  padding-right: 2px;
-  padding-left: 2px;
-  color: black;
-  background-color: white;
-  border-right: 2px solid black;
-  overflow-wrap: break-word;
+  padding: 0 12px;
+  color: #F1E6D2;                                /* TEXTE CRÈME */
+  background-color: transparent;                 /* pas de blanc */
+  border-right: 0;                               
   inline-size: 150px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 3px solid transparent;          /* indicateur actif */
 }
 
 .site-nav a:hover,
-a.actif {
-  background-color: lightgray;
+.site-nav a:focus,
+.site-nav a.actif {
+  color: #F1E6D2;                                /* reste crème → ne disparaît pas */
+  background-color: transparent;                 
+  border-bottom-color: #B8492D;                  /* brique */
+  text-decoration: underline;
 }
 
-.site-nav a:hover.actif {
-  background-color: #a1a1a1;
-}
+/* Etat hover+actif */
+.site-nav a:hover.actif { border-bottom-color: #8f3721; }
 
-/* History Page */
+/* Histoire */
 .history-container, .history-header  {
-  background-color: white;
+  background-color: transparent;                 /* laisse voir le fond crème */
   margin: auto;
   width: 80%;
 }
-  
-.history-header  {
-  padding-top: 20px;
-}
+.history-header  { padding-top: 20px; }
 
 .history-header-title {
-  padding: 5px;
-  border: solid black 2px;
-  border-radius: 4px;
+  padding: 10px;
+  border: 1px solid #DFD8C9;                     /* bord doux */
+  border-radius: 12px;
   margin-left: 10%;
   margin-right: 10%;
+  background-color: #FAF6EE;                     /* panneau clair */
+  color: #1F2C34;
+  box-shadow: 0 6px 16px rgba(20,20,20,.06);
 }
 
 .history-timeline-element {
@@ -65,6 +95,8 @@ a.actif {
   align-items: center;
   align-content: center;
   height: 300px;
+  gap: 12px;
+  padding: 8px 0;
 }
 
 .history-left-container,
@@ -73,24 +105,32 @@ a.actif {
   height: 100%;
   align-content: center;
 }
+.history-left-container { padding-left: 10px; padding-right: 5px; }
+.history-right-container{ padding-left: 5px;  padding-right: 10px; }
 
-.history-left-container {
-  padding-left: 10px;
-  padding-right: 5px;
-}
-
-.history-right-container {
-  padding-left: 5px;
-  padding-right: 10px;
-}
-
+/* Barre centrale brique */
 .history-center-container {
   width: 10px;
   height: 100%;
   margin-left: 10px;
   margin-right: 10px;
-  border-left: 4px solid black;
-  border-right: 4px solid black;
+  border-left: 0;
+  border-right: 0;
+  position: relative;
+}
+.history-center-container::before{
+  content:"";
+  position:absolute; inset:0;
+  width: 4px; margin-left:auto; margin-right:auto;
+  background:#B8492D;                             /* brique */
+  border-radius: 2px;
+}
+.history-center-container::after{
+  content:"";
+  position:absolute; left:50%; transform:translateX(-50%);
+  top: 10px; width:10px; height:10px; border-radius:50%;
+  background:#B8492D;
+  box-shadow: 0 0 0 3px #F1E6D2;                  /* halo crème */
 }
 
 .history-image {
@@ -98,13 +138,17 @@ a.actif {
   width: 60%;
   padding-top: 10px;
   padding-left: 25%;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(20,20,20,.06);
 }
 
 .history-text {
-  background-color: white;
-  border: 2px solid black;
-  border-radius: 4px;
+  background-color: #FAF6EE;
+  border: 1px solid #DFD8C9;
+  border-radius: 12px;
   padding: 10px;
+  color: #141414;
+  box-shadow: 0 6px 16px rgba(20,20,20,.06);
 }
 
 .history-timeline-footer {
@@ -113,16 +157,34 @@ a.actif {
   text-align: center;
   font-weight: bold;
   font-size: larger;
+  color: #1F2C34;
 }
-
-.history-timeline-footer svg {
-  overflow: visible;
-}
-
+.history-timeline-footer svg { overflow: visible; }
 .history-timeline-footer p {
-  border: 2px solid black;
-  border-radius: 4px;
+  border: 1px solid #DFD8C9;
+  border-radius: 999px;
   margin-right: 45%;
   margin-left: 45%;
   margin-top: 50px;
+  padding: 6px 12px;
+  background: linear-gradient(#FFFFFF, #FAF6EE);
+  box-shadow: 0 6px 16px rgba(20,20,20,.06);
+}
+
+/* Liens généraux */
+a{ color:#B8492D; }
+a:hover{ color:#1F2C34; }
+
+/* Responsive simple */
+@media (max-width: 900px){
+  .history-timeline-element{ flex-wrap: wrap; height: auto; }
+  .history-left-container,
+  .history-right-container{ width: 100%; padding: 0; order: 2; }
+  .history-center-container{
+    order:1; width:100%; height:12px; margin:8px 0 16px;
+  }
+  .history-center-container::before{
+    height:4px; width:100%; left:0; right:0; top:50%; transform:translateY(-50%);
+  }
+  .history-center-container::after{ display:none; }
 }
