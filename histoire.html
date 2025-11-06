@@ -4,193 +4,155 @@
     <!-- Étudiants : Tahfi Hamza (20337357) / Jackson Ho -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Nom - Histoire</title>
+    <title>Motorscape - Histoire</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="page-histoire">
-    <a class="skip-link" href="#contenu">Aller au contenu</a>
 
+  <body class="page-histoire">
+    <!-- HEADER -->
     <header class="site-header">
-      <img src="images/logo.png" alt="Logo du site" class="logo" />
-      <h1>Histoire de l’évolution automobile moderne</h1>
+      <a href="index.html" class="brand" aria-label="Accueil Motorscape">
+        <img src="images/logo.png" alt="Logo du site Motorscape" class="logo" />
+      </a>
+
+      <h1 class="site-title">Histoire de l’évolution automobile</h1>
+
       <nav class="site-nav" aria-label="Navigation principale">
         <a href="index.html">Accueil</a>
-        <a class="actif" href="histoire.html">Histoire</a>
+        <a class="actif" href="histoire.html" aria-current="page">Histoire</a>
         <a href="cultures.html">Cultures</a>
         <a href="actualite.html">Technologies / Actus</a>
-        <a href="a_propos.html">À propos</a>
+        <a href="a-propos.html">À propos</a>
       </nav>
     </header>
 
+    <!-- Lien d'évitement vers le contenu -->
+    <a class="ancre" href="#contenu">Aller directement au contenu</a>
+
+    <!-- Signet haut (critère d) -->
+    <a id="haut"></a>
+    <a class="signet" href="#bas">Aller en bas</a>
+
+    <!-- CONTENU -->
     <main id="contenu" class="site-main">
-      <div class="history-header">
+      <section class="history-header" aria-labelledby="timeline-intro">
         <div class="history-header-title">
-          <h2>Ligne de temps d'événements marquants</h2>
-          <p>
-            Découvrez des moments importants qui ont marqués l'industrie
-            automobile.
-          </p>
-          <a href="#footer">Aller à la fin</a>
+          <h2 id="timeline-intro" class="h2-alt">Ligne de temps d’événements marquants</h2>
+          <p>Découvrez des moments importants qui ont marqué l’industrie automobile.</p>
+          <a href="#fin-frise">Aller à la fin</a>
         </div>
-      </div>
-      <div class="history-container">
-        <div class="history-timeline-element">
+      </section>
+
+      <section class="history-container" aria-label="Frise chronologique">
+        <!-- 1913 -->
+        <article class="history-timeline-element">
           <div class="history-left-container">
-            <img
-              class="history-image"
-              src="images/assembly_line_ford_t.webp"
-              alt="Ligne d'assemblage de vehicle Ford du modèle T"
-            />
+            <img class="history-image" src="images/assembly_line_ford_t.webp"
+                 alt="Ligne d’assemblage du Ford Model T chez Ford" width="640" height="420" />
           </div>
           <div class="history-center-container"></div>
           <div class="history-right-container">
             <div class="history-text">
-              <h3>1913 - Apparition de la première ligne d'assemblage</h3>
+              <h3>1913 — Apparition de la première ligne d’assemblage</h3>
               <p>
-                Mise en oeuvre par Henry Ford, la première ligne d'assemblage
-                est introduite en 1913 avec le modèle Ford T, cette méthode
-                révolutionnaire permet de réduire le temps de fabrication de la
-                Ford T de 12 heures à 1 heures et 30 minutes augmentant de
-                manière significative la production. Cette innovation est encore
-                utilisée partout dans le monde par les grands fabricatants
-                automobiles.
+                Mise en oeuvre par Henry Ford, la première ligne d'assemblageest introduite en 1913 avec le modèle Ford T, cette méthoderévolutionnaire permet de réduire le temps de fabrication de laFord T de 12 heures à 1 heures et 30 minutes augmentant demanière significative la production. Cette innovation est encoreutilisée partout dans le monde par les grands fabricatantsautomobiles.
               </p>
             </div>
           </div>
-        </div>
-        <div class="history-timeline-element">
+        </article>
+
+        <!-- 1966 -->
+        <article class="history-timeline-element">
           <div class="history-left-container">
             <div class="history-text">
-              <h3>
-                1966 - Adoption de la loi "National Traffic and Motor Vehicle
-                Safety Act" au États-Unis
-              </h3>
+              <h3>1966 - Adoption de la loi "National Traffic and Motor Vehicle Safety Act" au États-Unis</h3>
               <p>
-                Causée par une augmentation significative des accidents de la
-                route, le gouvernement américan adopte une nouvelle loi qui vise
-                à améliorer la sécurité des véhicules motorisés. Cette loi
-                impose aux fabricants automobiles d'introduire des nouvelles
-                mesures de sécurités notamment les ceintures de sécurité,
-                celui-ci a permi de réduire le nombre de décès et de blessures
-                graves sur les routes.
+                Causée par une augmentation significative des accidents de laroute, le gouvernement américan adopte une nouvelle loi qui viseà améliorer la sécurité des véhicules motorisés. Cette loiimpose aux fabricants automobiles d'introduire des nouvellesmesures de sécurités notamment les ceintures de sécurité,celui-ci a permi de réduire le nombre de décès et de blessuresgraves sur les routes.
               </p>
             </div>
           </div>
           <div class="history-center-container"></div>
           <div class="history-right-container">
-            <img
-              class="history-image"
-              src="images/national_safety_act.jpg"
-              alt="Image du président Lyndon B. Johnson à la maison blanche lors de la signature de la loi National Traffic and Motor Vehicle Safety Act en 1966"
-            />
+            <img class="history-image" src="images/national_safety_act.jpg"
+                 alt="Signature de la loi américaine en 1966" width="640" height="420" />
           </div>
-        </div>
-        <div class="history-timeline-element">
+        </article>
+
+        <!-- 1990 -->
+        <article class="history-timeline-element">
           <div class="history-left-container">
-            <img
-              class="history-image"
-              src="images/mazda_eunos_cosmo.jpg"
-              alt="Image de la voiture Mazda Eunos Cosmo avec GPS intégré"
-            />
+            <img class="history-image" src="images/mazda_eunos_cosmo.jpg"
+                 alt="Mazda Eunos Cosmo équipée d’un GPS de série" width="640" height="420" />
           </div>
           <div class="history-center-container"></div>
           <div class="history-right-container">
             <div class="history-text">
-              <h3>
-                1990 - Apparition de la première voiture commerciale équipée
-                d'un GPS
-              </h3>
+              <h3>Apparition de la première voiture commerciale équipée d'un GPS</h3>
               <p>
-                Le premier véhicule de production à être équipé d'un système de
-                positionnement GPS est le Mazda Eunos Cosmo, vendu exclusivement
-                au Japon. Ce système révolutionnaire de navigation permettant
-                aux conducteurs de naviguer plus facilement vers leurs
-                destinations marque le début de la popularisation de ce genre
-                d'outils.
+                Le premier véhicule de production à être équipé d'un système depositionnement GPS est le Mazda Eunos Cosmo, vendu exclusivementau Japon. Ce système révolutionnaire de navigation permettantaux conducteurs de naviguer plus facilement vers leursdestinations marque le début de la popularisation de ce genred'outils.
               </p>
             </div>
           </div>
-        </div>
-        <div class="history-timeline-element">
+        </article>
+
+        <!-- 1996 -->
+        <article class="history-timeline-element">
           <div class="history-left-container">
             <div class="history-text">
-              <h3>
-                1996 - Introduction du General Motors EV1, le premier véhicule
-                électrique produit en masse
-              </h3>
+              <h3>1996 - Introduction du General Motors EV1, le premier véhiculeélectrique produit en masse</h3>
               <p>
-                Le General Motors EV1 est considéré comme le premier véhicule
-                électrique a être produite en masse. Lancé en 1996, ce véhicule
-                innovant marque le début de l'électrification de l'industrie
-                automobile. Malgré les limitations technologiques de l'époque,
-                l'EV1 était capable d'atteindre une autonomie d'environ 130 à
-                160 kilomètres par charge. Néonmoins, le projet a été arrêté en
-                2001 et la plupart des véhicules ont été détruites par la
-                compagnie elle même pour diverse raisons.
+                Le General Motors EV1 est considéré comme le premier véhiculeélectrique a être produite en masse. Lancé en 1996, ce véhiculeinnovant marque le début de l'électrification de l'industrieautomobile. Malgré les limitations technologiques de l'époque,l'EV1 était capable d'atteindre une autonomie d'environ 130 à160 kilomètres par charge. Néonmoins, le projet a été arrêté en2001 et la plupart des véhicules ont été détruites par lacompagnie elle même pour diverse raisons.
               </p>
             </div>
           </div>
           <div class="history-center-container"></div>
           <div class="history-right-container">
-            <img
-              class="history-image"
-              src="images/EV1.jpg"
-              alt="Image de la voiture General Motors EV1"
-            />
+            <img class="history-image" src="images/EV1.jpg"
+                 alt="General Motors EV1 sur route" width="640" height="420" />
           </div>
-        </div>
-        <div class="history-timeline-element">
+        </article>
+
+        <!-- 1997 -->
+        <article class="history-timeline-element">
           <div class="history-left-container">
-            <img
-              class="history-image"
-              src="images/toyota_prius.jpg"
-              alt="Image d'une Toyota Prius Hybride"
-            />
+            <img class="history-image" src="images/toyota_prius.jpg"
+                 alt="Toyota Prius de première génération" width="640" height="420" />
           </div>
           <div class="history-center-container"></div>
           <div class="history-right-container">
             <div class="history-text">
-              <h3>
-                1997 - Introduction du Toyota Prius, le premier véhicule hybride
-                produit en masse
-              </h3>
+              <h3>11997 - Introduction du Toyota Prius, le premier véhicule hybrideproduit en masse</h3>
               <p>
-                La Toyota Prius lancée exclusivement au Japon en 1997 est
-                considérée comme le premier véhicule hybride produit en masse,
-                combinant un moteur à essence et un moteur électrique. Cette
-                série de véhicule encore produite aujourd'hui a joué un rôle
-                significative dans l'avancement de la technologie hybride,
-                offrant une alternative plus écologique aux véhicules
-                traditionnels à combustion interne et contribuant à réduire les
-                émissions de gaz à effet de serre.
+                La Toyota Prius lancée exclusivement au Japon en 1997 estconsidérée comme le premier véhicule hybride produit en masse,combinant un moteur à essence et un moteur électrique. Cettesérie de véhicule encore produite aujourd'hui a joué un rôlesignificative dans l'avancement de la technologie hybride,offrant une alternative plus écologique aux véhiculestraditionnels à combustion interne et contribuant à réduire lesémissions de gaz à effet de serre.
               </p>
             </div>
           </div>
-        </div>
-        <div class="history-timeline-element" style="height: 50%">
-          <div id="footer" class="history-timeline-footer">
-            <svg width="50" height="10">
-              <circle
-                cx="25"
-                cy="5"
-                r="20"
-                stroke="black"
-                stroke-width="2"
-                fill="white"
-              />
+        </article>
+
+        <!-- Présent -->
+        <article class="history-timeline-element">
+          <div id="fin-frise" class="history-timeline-footer">
+            <svg width="50" height="10" aria-hidden="true">
+              <circle cx="25" cy="5" r="4" fill="#B8492D"></circle>
             </svg>
             <p>Présent</p>
             <a href="#contenu">Revenir au début</a>
           </div>
-        </div>
-      </div>
+        </article>
+      </section>
+
+      <!-- Signet bas (critère d) -->
+      <a id="bas"></a>
+      <p class="signets-fin"><a class="signet" href="#haut">Aller en haut</a></p>
     </main>
 
+    <!-- FOOTER -->
     <footer class="site-footer">
       <p>
-        <strong>Tahfi Hamza</strong> & <strong>Jackson Ho</strong> - Dernière
-        mise à jour: 5 Novembre 2025
+        <strong>Tahfi Hamza</strong> &amp; <strong>Jackson Ho</strong> — Dernière mise à jour :
+        <time datetime="2025-11-05">5 novembre 2025</time>
       </p>
+      <span class="badge-css" aria-label="Badge CSS des auteurs">TJ</span>
     </footer>
   </body>
 </html>

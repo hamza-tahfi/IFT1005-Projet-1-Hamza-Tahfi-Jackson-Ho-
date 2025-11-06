@@ -7,99 +7,99 @@
     <title>Motorscape - Technologies / Actualités</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="page-techno">
-    <a id="haut" class="ancre" href="#bas">Aller en bas</a>
 
+  <body class="page-techno">
+    <!-- HEADER -->
     <header class="site-header">
-      <img src="images/logo.png" alt="Logo du site" class="logo" />
-      <h1>Technologies & Actualités</h1>
+      <a href="index.html" class="brand" aria-label="Accueil Motorscape">
+        <img src="images/logo.png" alt="Logo du site Motorscape" class="logo" />
+      </a>
+
+      <h1 class="site-title">Technologies &amp; Actualités</h1>
+
       <nav class="site-nav" aria-label="Navigation principale">
         <a href="index.html">Accueil</a>
         <a href="histoire.html">Histoire</a>
         <a href="cultures.html">Cultures</a>
-        <a class="actif" href="actualite.html">Technologies / Actus</a>
-        <a href="a_propos.html">À propos</a>
+        <a class="actif" href="actualite.html" aria-current="page">Technologies / Actus</a>
+        <a href="a-propos.html">À propos</a>
       </nav>
     </header>
 
+    <!-- Lien d'évitement + signet vers le bas -->
+    <a class="ancre" href="#contenu">Aller directement au contenu</a>
+    <a id="haut" class="ancre" href="#bas">Aller en bas</a>
+
+    <!-- CONTENU PRINCIPAL -->
     <main id="contenu" class="site-main">
       <div class="article-container">
+        <!-- ARTICLE PRINCIPAL -->
         <div class="article">
           <img
             class="article-image"
             src="images/toyota-hydrogen-fuel-cell-electric-benefits-2024-mirai-l.avif"
-            alt="Voiture alimenté en hydrogène Toyota"
+            alt="Voiture Toyota alimentée par pile à hydrogène en démonstration"
+            width="800" height="533"
           />
           <div class="article-text">
-            <h2>Le futur est-elle alimenté en hydrogène ?</h2>
+            <h2>Le futur est-il alimenté en hydrogène&nbsp;?</h2>
             <p>
-              Les changements climatiques et l'épuisement des ressources comme
-              le pétrole, on poussé les fabricants automobiles à chercher des
-              alternatives à l'essence. Une de ces alternatives est l'hydrogène,
-              un élément présent partout dans l'atmosphère qui peut être
-              convertie en source d'énergie pour des véhicules. Cependant,
-              l'infrastructure nécessaire pour supporter ce genre de véhicule
-              est encore très limitée et couteuse.
+              Les changements climatiques et l'épuisement des ressources comme le pétrole
+              poussent les fabricants à chercher des alternatives. L'hydrogène peut être
+              converti en énergie pour les véhicules, mais l'infrastructure reste limitée
+              et coûteuse à déployer.
             </p>
           </div>
         </div>
+
+        <!-- AUTRES ARTICLES -->
         <div class="bottom-articles-container">
           <div class="article">
-            <img
-              class="article-image"
-              src="images/self-driving.jpg"
-              alt="Image d'un volant d'une voiture autonome"
-            />
-            <h3>La conduite autonome est-t-elle plus sécuritaire ?</h3>
-            <p>
-              Le sujet de la conduite autonome fait débat depuis plusieurs
-              années et avec l'avancé technologique, l'objectif d'un véhicule
-              complètement autonome semble de plus en plus proche.
-              L'introduction du l'autopilot de Tesla en 2015 et les avancées
-              rapides a permis à des compagnies comme Waymo de lancer des
-              services de taxi autonome dans certaines villes des États-Unis.
-            </p>
+            <img class="article-image" src="images/self-driving.jpg" alt="Volant et écran d'un véhicule en conduite autonome" width="640" height="427" />
+            <div class="article-text">
+              <h3>La conduite autonome est-elle plus sécuritaire&nbsp;?</h3>
+              <p>
+                Débats persistants. Les progrès (Tesla Autopilot, Waymo) rapprochent
+                l’idée de taxis autonomes en conditions réelles, avec des enjeux de sécurité et d’éthique.
+              </p>
+            </div>
           </div>
+
           <div class="article">
-            <img
-              class="article-image"
-              src="images/voiture-volante.jpg"
-              alt="Image d'une voiture volante"
-            />
-            <h3>Les voitures volantes, un sujet toujours pertinent ?</h3>
-            <p>
-              Les voitures volantes sont généralent considérées comme objects de
-              science fictions, cependant elles existent réellement depuis
-              plusieurs années néanmoins leur commercialisation reste lointaine.
-            </p>
+            <img class="article-image" src="images/voiture-volante.jpg" alt="Prototype de voiture volante en vol de démonstration" width="640" height="427" />
+            <div class="article-text">
+              <h3>Les voitures volantes, un sujet toujours pertinent&nbsp;?</h3>
+              <p>
+                Présentes depuis des années à l’état de prototypes. Les obstacles techniques,
+                réglementaires et économiques freinent la commercialisation.
+              </p>
+            </div>
           </div>
+
           <div class="article">
-            <img
-              class="article-image"
-              src="images/quantumscape-solid-state-battery.jpg"
-              alt="Image de batteries à semi-conducteurs"
-            />
-            <h3>Une alternative au batterie au lithium</h3>
-            <p>
-              L'électrification de nos véhicules est l'un des plus grands
-              changements dans l'industrie automobile, cependant un des plus
-              grands limiteurs de l'avancement technologique dans ce domaine
-              sont les batteries au lithium utilisées. Ceux-ci dégradent avec le
-              temps, posent un risque d'incendie et leur extraction a un impact
-              environnemental considérable. Les batteries à semi-conducteurs
-              sont une des alternatives que les fabricants cherchent pour
-              résoudre ces problèmes. L'augmentation du nombres de véhicules
-              électriques sur la route
-            </p>
+            <img class="article-image" src="images/quantumscape-solid-state-battery.jpg" alt="Module de batterie à semi-conducteurs en laboratoire" width="640" height="427" />
+            <div class="article-text">
+              <h3>Une alternative aux batteries au lithium</h3>
+              <p>
+                Les batteries à semi-conducteurs promettent plus de sécurité et de densité énergétique,
+                tout en réduisant la dégradation et les risques d’incendie.
+              </p>
+            </div>
           </div>
         </div>
+
+        <!-- Ancre bas de page -->
+        <div id="bas"></div>
       </div>
     </main>
 
+    <!-- FOOTER -->
     <footer class="site-footer">
-      <p><strong>Tahfi Hamza</strong> &amp; <strong>Jackson Ho</strong> — Dernière mise à jour :
-      <time datetime="2025-11-05">5 novembre 2025</time>
-      </p>    
+      <p>
+        <strong>Tahfi Hamza</strong> &amp; <strong>Jackson Ho</strong> — Dernière mise à jour :
+        <time datetime="2025-11-05">5 novembre 2025</time>
+      </p>
+      <span class="badge-css" aria-label="Badge CSS des auteurs">TJ</span>
     </footer>
   </body>
 </html>

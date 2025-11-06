@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <!-- Étudiants : Tahfi Hamza (20337357) / Jackson Ho -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Motorscape - À propos</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="page-a-propos">
+    <!-- HEADER -->
+    <header class="site-header">
+      <a href="index.html" class="brand" aria-label="Accueil Motorscape">
+        <img src="images/logo.png" alt="Logo du site Motorscape" class="logo" />
+      </a>
+
+      <h1 class="site-title">À propos</h1>
+
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="histoire.html">Histoire</a>
+        <a href="cultures.html">Cultures</a>
+        <a href="actualite.html">Technologies / Actus</a>
+        <a class="actif" href="a-propos.html" aria-current="page">À propos</a>
+      </nav>
+    </header>
+
+    <!-- Lien d'évitement -->
+    <a class="ancre" href="#contenu">Aller au contenu</a>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main id="contenu" class="site-main">
+      <section aria-labelledby="public-vise">
+        <h2 id="public-vise">Public visé</h2>
+        <p>
+          Notre site s’adresse aux <strong>débutants curieux</strong>, aux <strong>passionnés d’automobile</strong> et aux
+          <strong>étudiants</strong> souhaitant comprendre de façon claire et visuelle les
+          <em>évolutions</em>, les <em>cultures</em> et les <em>technologies</em> automobiles.
+        </p>
+      </section>
+
+      <section aria-labelledby="objectifs">
+        <h2 id="objectifs" class="h2-alt">Objectifs</h2>
+        <ul>
+          <li><strong>Informer</strong> sur l’histoire et les cultures automobiles, sans jargon.</li>
+          <li><strong>Illustrer</strong> avec des images pertinentes et des exemples concrets.</li>
+          <li><strong>Accompagner</strong> la navigation avec des repères visuels cohérents.</li>
+          <li><strong>Respecter</strong> les bonnes pratiques (structure, accessibilité, validation).</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="design">
+        <h2 id="design">Choix de design (couleurs, typos, hiérarchie)</h2>
+        <h3>Palette et contraste</h3>
+        <p>
+          Palette sobre et lisible (fond crème, texte foncé, liens brique/navy). État actif et survol visibles.
+        </p>
+
+        <h3>Typographies &amp; hiérarchie</h3>
+        <ul>
+          <li><strong>Titres</strong> : Oswald / Bebas Neue.</li>
+          <li><strong>Texte courant</strong> : Lato / Open Sans.</li>
+          <li><strong>Hiérarchie</strong> : H1 &gt; H2 &gt; paragraphes / listes.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="structure">
+        <h2 id="structure">Disposition &amp; navigation</h2>
+        <p>
+          Structure homogène : en-tête (logo + nav), titre, ancre, contenu, pied de page. Un seul fichier CSS commun.
+        </p>
+      </section>
+
+      <section aria-labelledby="accessibilite">
+        <h2 id="accessibilite">Accessibilité</h2>
+        <ul>
+          <li>Contrastes suffisants, tailles lisibles, <code>alt</code> descriptifs.</li>
+          <li>Éléments focusables au clavier, liens “Aller au contenu / bas / haut”.</li>
+          <li>Titres logiques, sections sémantisées.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="coherence">
+        <h2 id="coherence">Cohérence inter-pages &amp; exigences</h2>
+        <ul>
+          <li>Un <strong>seul fichier CSS</strong> commun.</li>
+          <li>≥ 3 images + 1 image circulaire, liste numérotée + sous-liste numérotée.</li>
+          <li>Deux H2 alternatifs (police/couleur), signets haut/bas (page Histoire).</li>
+          <li>Badge CSS-only (footer) et figure SVG personnalisée (page Cultures).</li>
+        </ul>
+        <p>
+          La figure SVG de <em>Cultures</em> (casque + drapeau) est réalisée à partir de
+          <code>circle</code>, <code>rect</code>, <code>path</code> et d’un <code>pattern</code> damier personnalisé.
+        </p>
+      </section>
+
+      <section aria-labelledby="sources-images">
+        <h2 id="sources-images">Sources des images</h2>
+        <ul class="sources-images">
+          <!-- Histoire -->
+          <li><a href="https://i0.wp.com/transportgeography.org/wp-content/uploads/assembly_line_ford_t.jpg?w=1280&amp;ssl=1">Ligne d’assemblage Ford T</a></li>
+          <li><a href="https://www.fhwa.dot.gov/highwayhistory/moment/images/lbjlibrary.org_2.jpg">National Traffic and Motor Vehicle Safety Act (1966)</a></li>
+          <li><a href="https://s1.cdn.autoevolution.com/images/news/eunos-cosmo-a-look-back-at-the-forgotten-three-rotor-jdm-legend-222530-7.jpg">Mazda Eunos Cosmo</a></li>
+          <li><a href="https://upload.wikimedia.org/wikipedia/commons/c/c5/EV1A014_%281%29_cropped.jpg">GM EV1</a></li>
+          <li><a href="https://upload.wikimedia.org/wikipedia/commons/b/b5/1998_Toyota_Prius_NHW10_Silver_Strara_Metallic_%28front%29.jpg">Toyota Prius (NHW10)</a></li>
+          <!-- Actus -->
+          <li><a href="https://toyotacanada.scene7.com/is/image/toyotacanada/toyota-hydrogen-fuel-cell-electric-benefits-2024-mirai-l?fit=constrain&amp;wid=2200&amp;qlt=90">Toyota Mirai (pile à hydrogène)</a></li>
+          <li><a href="https://www.radiofrance.fr/s3/cruiser-production/2022/08/eb1de7d3-0e0b-4839-8519-ed3fb973c7f7/1200x680_043-dpa-pa-220506-99-176414-dpai.jpg">Voiture autonome (illustration)</a></li>
+          <li><a href="https://annuelauto.ca/wp-content/uploads/2025/05/Klein-Vision-2025-2.jpg">Voiture volante (Klein Vision)</a></li>
+          <li><a href="https://cdn.motor1.com/images/mgl/E6WmOo/s3/quantumscape-solid-state-battery.jpg">Batteries à semi-conducteurs</a></li>
+          <!-- Banques / icônes -->
+          <li><a href="https://www.freepik.com/">Freepik</a> (ressources graphiques)</li>
+          <li><a href="https://www.flaticon.com/">Flaticon</a> (icônes)</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="sources-code">
+        <h2 id="sources-code">Crédits techniques (code &amp; documentation)</h2>
+        <ul class="sources-tech">
+          <li><a href="https://developer.mozilla.org/">MDN Web Docs</a> (référence HTML/CSS/JS)</li>
+          <li><a href="https://www.w3schools.com/">W3Schools</a> (références HTML/CSS de base)</li>
+          <li><a href="https://stackoverflow.com/">Stack Overflow</a> (solutions ponctuelles)</li>
+          <li><a href="https://www.youtube.com/@CodeBros">CodeBros (YouTube)</a> (démos pédagogiques)</li>
+          <li>Terry Ann Felke-Morris, <em>Web Development and Design Foundations with HTML5</em>, 10e éd.</li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <p>
+        <strong>Tahfi Hamza</strong> &amp; <strong>Jackson Ho</strong> — Dernière mise à jour :
+        <time datetime="2025-11-05">5 novembre 2025</time>
+      </p>
+      <span class="badge-css" aria-label="Badge CSS des auteurs">TJ</span>
+    </footer>
+  </body>
+</html>

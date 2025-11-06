@@ -1,256 +1,301 @@
 /* =========================================================
+   Motorscape – CSS
    Étudiants : Tahfi Hamza (20337357) / Jackson Ho
-   Fichier CSS unique – Motorscape (version corrigée)
    ========================================================= */
 
 /* Polices Google */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@500;700&family=Lato:wght@400;700&family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap');
 
-/* Base & typos */
-html, body { margin: 0; padding: 0; }
-body{
-  background-color: #F1E6D2;         /* fond crème */
+/* Base */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; overflow-x: hidden; }
+body {
+  background-color: #F1E6D2;
   color: #141414;
   font-family: Lato, "Open Sans", Roboto, system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
   line-height: 1.6;
 }
-
-/* ⚠️ N'affecte plus le logo avec un style d'image global */
-.site-main img,
-.article img,
-.history-image { 
-  max-width: 100%;
-  height: auto;
-}
+img { max-width: 100%; height: auto; display: block; }
 
 /* Titres */
-h1, h2, h3, h4{
+h1, h2, h3, h4 {
   font-family: Oswald, "Bebas Neue", Impact, "Haettenschweiler", "Arial Narrow", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   color: #1F2C34;
-  margin-top: 0;
-}
-
-/* Wrapper principal */
-.site-main { background-color: #F1E6D2; }
-
-/* ======================= HEADER & NAV ======================= */
-.site-header{
-  background-color: #1F2C34;         /* navy */
-  color: #F1E6D2;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  padding: 10px 16px;
-  flex-wrap: wrap;                    /* passe en 2 lignes en mobile */
-  box-shadow: 0 8px 20px rgba(0,0,0,.15);
-}
-
-/* Logo (désolidarisé des autres images) */
-.logo{
-  height: 48px;                       /* taille cohérente */
-  width: auto;
-  max-width: none;                    /* annule tout max-width global */
-  display: block;
-}
-
-/* Titre éventuel dans le header (pages Histoire/Techno) */
-.site-header h1{
   margin: 0;
-  color: #F1E6D2;
-  font-size: clamp(1.25rem, 1.4rem + 1vw, 1.8rem);
-  line-height: 1.2;
+}
+h1 {
+  font-size: clamp(1.8rem, 2.4vw, 2.4rem);
+  text-align: center;
+  margin: 24px 24px 8px;
+}
+h2 { font-size: clamp(1.2rem, 1.8vw, 1.6rem); margin: 20px 0 8px; }
+h3 { font-size: clamp(1rem, 1.4vw, 1.2rem); margin: 12px 0 6px; }
+
+/* H2 alternatifs (critère c) */
+.h2-alt{
+  font-family: "Bebas Neue", Oswald, sans-serif;
+  color: #8f3721;
+  letter-spacing: 0.06em;
 }
 
-/* Navigation principale */
-.site-nav{
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin-left: auto;                  /* pousse la nav à droite */
-  flex-wrap: wrap;                    /* évite disparition des liens */
+/* Liens */
+a { color: #B8492D; text-decoration: none; }
+a:hover { color: #1F2C34; text-decoration: underline; }
+
+/* Focus clavier */
+a:focus-visible,
+.site-nav a:focus-visible,
+.signet:focus-visible,
+.badge-css:focus-visible {
+  outline: 3px solid #B8492D;
+  outline-offset: 2px;
+  border-radius: 6px;
 }
 
-/* Liens de nav : on supprime les largeurs rigides qui cassaient le layout */
+/* Contenu global */
+.site-main { padding: 0 24px 32px; background-color: #F1E6D2; }
+
+/* Header & Navigation */
+/* Header */
+.site-header{
+  width:100%;
+  background:#1F2C34;
+  color:#F1E6D2;
+  padding:8px 16px 12px;
+  box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+.brand{ float:left; margin-right:12px; }
+.logo{ height:84px; width:auto; display:block; }
+.site-title{
+  margin: 16px 0 6px;
+  font-family: Oswald, "Bebas Neue", sans-serif;
+  font-size: clamp(1.6rem, 2.2vw, 2.2rem);
+  color:#F1E6D2;
+}
+
+.site-nav{ margin-top:6px; }
 .site-nav a{
-  color: #F1E6D2;
-  text-decoration: none;
-  font-weight: 700;
-  padding: 10px 12px;
-  border-bottom: 3px solid transparent;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  /* SUPPRIMÉS : height:100%; min-width:20%; inline-size:150px; */
+  display:inline-block;
+  padding:10px 14px;
+  margin-right:6px;
+  font-weight:700;
+  color:#F1E6D2;
+  background: transparent;
+  border-radius:6px;
+  transition: background-color .15s ease, color .15s ease;
+  border-bottom:3px solid transparent; /* conserve un indicateur si besoin */
 }
-
 .site-nav a:hover,
-.site-nav a:focus,
+.site-nav a:focus{
+  background:#3a5361;      /* le bouton entier change de couleur */
+  color:#F1E6D2;
+  text-decoration:none;
+}
 .site-nav a.actif{
-  color: #F1E6D2;
-  border-bottom-color: #B8492D;       /* brique */
-  text-decoration: underline;
+  background:#B8492D;       /* état actif plein */
+  color:#F1E6D2;
 }
-.site-nav a:hover.actif{ border-bottom-color:#8f3721; }
 
-/* ======================= HISTOIRE ======================= */
-.history-container, .history-header{
-  background-color: transparent;
-  margin: auto;
-  width: min(1100px, 80%);
+.site-header::after{ content:""; display:block; clear:both; }
+
+@media (max-width:900px){
+  .logo{ height:76px; }
+  .site-nav a{ padding:8px 12px; }
 }
-.history-header{ padding-top: 20px; }
 
-.history-header-title{
-  padding: 10px;
-  border: 1px solid #DFD8C9;
-  border-radius: 12px;
-  margin-inline: 10%;
+/* Empilement mobile (logo -> titre -> nav) sans toucher aux floats globaux */
+@media (max-width:700px){
+  .brand{ float:none; display:block; margin:0 auto 6px; text-align:center; }
+  .site-title{ margin: 8px 0; text-align:center; }
+  .site-nav{ text-align:center; }
+}
+
+/* Accessibilité */
+.sr-only {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  margin: -1px; border: 0; padding: 0;
+  white-space: nowrap; clip-path: inset(50%); clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.ancre { display: block; text-align: center; margin: 6px 0 24px; color: #B8492D; font-weight: 700; }
+
+/* Images */
+.img-float-droite { float: right; margin: 0 0 12px 16px; border: none !important; box-shadow: none !important; border-radius: 0; max-width: 40%; }
+.img-droite { float: right; margin: 0 0 12px 16px; }
+.cercle { border-radius: 50%; object-fit: cover; }
+
+/* Frise Histoire */
+.history-header, .history-container { width: min(1100px, 90%); margin: 0 auto; }
+.history-header { padding-top: 20px; }
+.history-header-title {
   background-color: #FAF6EE;
   color: #1F2C34;
+  border: 1px solid #DFD8C9;
+  border-radius: 12px;
+  padding: 12px;
   box-shadow: 0 6px 16px rgba(20,20,20,.06);
 }
 
-.history-timeline-element{
+.history-timeline-element {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   gap: 12px;
-  padding: 8px 0;
-  min-height: 300px;
+  padding: 12px 0;
+  min-height: 260px;
 }
 
-.history-left-container,
-.history-right-container{
+.history-left-container, .history-right-container {
   width: 50%;
   align-content: center;
 }
 .history-left-container { padding: 0 5px 0 10px; }
-.history-right-container{ padding: 0 10px 0 5px; }
+.history-right-container { padding: 0 10px 0 5px; }
 
-/* Barre centrale brique */
-.history-center-container{
+.history-center-container {
   width: 10px;
-  position: relative;
   margin: 0 10px;
+  position: relative;
+  align-self: stretch;
 }
-.history-center-container::before{
-  content:"";
-  position:absolute; inset:0;
-  width: 4px; margin: 0 auto;
-  background:#B8492D;
+.history-center-container::before {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 50%; transform: translateX(-50%);
+  width: 4px;
+  background: #B8492D;
   border-radius: 2px;
 }
-.history-center-container::after{
-  content:"";
-  position:absolute; left:50%; transform:translateX(-50%);
-  top: 10px; width:10px; height:10px; border-radius:50%;
-  background:#B8492D;
+.history-center-container::after {
+  content: "";
+  position: absolute;
+  left: 50%; transform: translateX(-50%);
+  top: 10px;
+  width: 10px; height: 10px; border-radius: 50%;
+  background: #B8492D;
   box-shadow: 0 0 0 3px #F1E6D2;
 }
 
-.history-image{
+/* cartes & images */
+.history-image {
   width: 60%;
-  margin-left: 20%;
+  margin-left: 25%;
   border-radius: 12px;
   box-shadow: 0 6px 16px rgba(20,20,20,.06);
 }
-
-.history-text{
+.history-text {
   background-color: #FAF6EE;
   border: 1px solid #DFD8C9;
   border-radius: 12px;
-  padding: 10px;
+  padding: 12px;
   color: #141414;
   box-shadow: 0 6px 16px rgba(20,20,20,.06);
 }
-.history-text p{ padding: 15px; }
+.history-text p { margin: 0; padding: 6px 4px; }
 
-.history-timeline-footer{
-  width: 100%;
+/* pied de frise */
+.history-timeline-footer {
   text-align: center;
-  font-weight: bold;
-  font-size: larger;
   color: #1F2C34;
+  font-weight: 700;
 }
-.history-timeline-footer svg{ overflow: visible; }
-.history-timeline-footer p{
+.history-timeline-footer p {
+  display: inline-block;
   border: 1px solid #DFD8C9;
   border-radius: 999px;
-  margin: 50px auto 0;
   padding: 6px 12px;
   background: linear-gradient(#FFFFFF, #FAF6EE);
   box-shadow: 0 6px 16px rgba(20,20,20,.06);
-  width: fit-content;
+  margin: 12px 0 0;
 }
 
-/* ======================= LIENS GÉNÉRAUX ======================= */
-a{ color:#B8492D; }
-a:hover{ color:#1F2C34; }
+/* frise responsive : trait horizontal */
+@media (max-width: 900px){
+  .history-timeline-element { flex-wrap: wrap; min-height: unset; }
+  .history-left-container, .history-right-container { width: 100%; order: 2; padding: 0; }
+  .history-center-container {
+    order: 1;
+    width: 100%;
+    height: 12px;
+    margin: 8px 0 16px;
+    align-self: auto;
+  }
+  .history-center-container::before {
+    top: 50%; bottom: auto; left: 0; transform: translateY(-50%);
+    width: 100%; height: 4px;
+  }
+  .history-center-container::after { display: none; }
+  .history-image { width: 100%; margin: 0; }
+}
 
-/* ======================= TECHNO / ACTUS ======================= */
-.article-container{
-  background-color: #fff;
-  margin: auto;
-  max-width: min(1100px, 80%);
+/* Page Cultures */
+.page-cultures section { overflow: auto; } /* contient les floats */
+.mini-svg { width: 200px; height: auto; display: block; margin: 12px 0; } /* (fix) inline-svg retiré ici */
+#panorama ol { margin: 8px 0 12px 22px; }        /* Sous-listes numérotées (critère b) */
+#panorama ol[type="a"] { list-style-type: lower-alpha; }
+#panorama ol[type="i"] { list-style-type: lower-roman; }
+
+/* Page Actualités */
+.article-container {
+  background-color: #F1E6D2;
+  margin: 0 auto;
+  max-width: 85%;
+  padding: 32px;
   border-radius: 8px;
-  padding-bottom: 24px;
+  box-shadow: 0 6px 16px rgba(20,20,20,.06);
 }
-
-.article{ display: flex; gap: 10px; align-items: flex-start; }
-
-.article-text{ padding: 20px; padding-right: 10%; }
-
-.article img{
+.article { display: flex; gap: 12px; align-items: flex-start; }
+.article-text { padding: 8px 10% 8px 8px; }
+.article img {
   width: 40%;
-  height: auto;
-  margin: 10px;
-  box-shadow: 5px 5px 10px lightgray;
-  border-radius: 5px;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.1);
   object-fit: cover;
 }
-
-.article p, .article h2, .article h3{
-  padding-top: 10px;
-  padding-left: 15px;
-  padding-right: 15px;
+.bottom-articles-container { padding-top: 36px; display: flex; gap: 16px; align-items: stretch; }
+.bottom-articles-container .article { flex-direction: column; flex: 1; }
+.bottom-articles-container img { width: 100%; margin: 0; }
+@media (max-width: 900px) {
+  .article { flex-direction: column; }
+  .article img { width: 100%; }
+  .article-text { padding-right: 0; }
 }
 
-.bottom-articles-container{
-  padding-top: 32px;
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  gap: 10px;
+/* Signets haut/bas (critère d */
+.signet{
+  display:inline-block; margin: 6px 0 18px; padding: 6px 12px;
+  font-weight:700; color:#F1E6D2;
+  background: linear-gradient(#B8492D, #8f3721);
+  border-radius: 999px; box-shadow: 0 4px 10px rgba(0,0,0,.12);
 }
+.signet:hover{ text-decoration:none; filter: brightness(1.05); }
+.signets-fin{ text-align:center; margin: 8px 0 24px; }
 
-.bottom-articles-container .article{
-  flex-direction: column;
-  flex: 1;
-  margin: 0;
+/* Badge CSS-only (critère e) */
+.badge-css{
+  display:inline-flex; align-items:center; justify-content:center;
+  width: 44px; height: 44px; margin-top: 8px; margin-left: 8px;
+  font: 700 16px/1 Oswald, sans-serif; color:#F1E6D2;
+  background: linear-gradient(135deg, #1F2C34 0%, #3a5361 100%);
+  border-radius: 50%;
+  box-shadow: 0 6px 16px rgba(0,0,0,.18), inset 0 2px 6px rgba(255,255,255,.06);
+  transition: transform .15s ease, filter .15s ease;
 }
+.badge-css:hover{ transform: scale(1.06); filter: brightness(1.06) saturate(1.05); }
 
-.bottom-articles-container img{
-  width: 90%;
-  height: auto;
-  margin: 0 auto;
-}
+/* Titres + icônes */
+.title-with-icon, .with-icon { display: flex; align-items: center; justify-content: center; gap: 10px; }
+.title-icon { width: 36px; height: auto; }
+.inline-svg { width: 40px; height: auto; } 
 
-/* ======================= RESPONSIVE ======================= */
-@media (max-width: 900px){
-  .site-header{ gap: 10px; }
-  .logo{ height: 40px; }
-  .site-nav{ width: 100%; margin-left: 0; }  /* nav passe sous le logo/titre */
-  
-  .history-timeline-element{ flex-wrap: wrap; min-height: unset; }
-  .history-left-container,
-  .history-right-container{ width: 100%; padding: 0; order: 2; }
-  .history-center-container{ order:1; width:100%; height:12px; margin:8px 0 16px; }
-  .history-center-container::before{
-    height:4px; width:100%; left:0; right:0; top:50%; transform:translateY(-50%);
-  }
-  .history-center-container::after{ display:none; }
+/* Pied de page */
+.site-footer { text-align: center; padding: 24px 24px 32px; color: #1F2C34; }
 
-  .article{ flex-direction: column; }
-  .article img{ width: 100%; margin: 0; }
+/* Motion safe */
+@media (prefers-reduced-motion: reduce){
+  * { transition: none !important; animation: none !important; }
 }

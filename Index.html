@@ -11,14 +11,14 @@
   <body class="page-accueil">
     <!-- HEADER -->
     <header class="site-header">
-      <nav class="site-nav" aria-label="Navigation principale">
-        <!-- Logo cliquable renvoyant vers l'accueil -->
-        <a href="index.html" class="brand" aria-label="Accueil Motorscape">
-          <img src="images/logo.png" alt="Logo du site" class="logo" />
-        </a>
+      <a href="index.html" class="brand" aria-label="Accueil Motorscape">
+        <img src="images/logo.png" alt="Logo du site Motorscape" class="logo" />
+      </a>
 
-        <!-- Liens de navigation -->
-        <a class="actif" href="index.html">Accueil</a>
+      <h1 class="site-title">Accueil</h1>
+
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a class="actif" href="index.html" aria-current="page">Accueil</a>
         <a href="histoire.html">Histoire</a>
         <a href="cultures.html">Cultures</a>
         <a href="actualite.html">Technologies / Actus</a>
@@ -26,14 +26,15 @@
       </nav>
     </header>
 
+    <!-- Lien d'évitement -->
+    <a class="ancre" href="#contenu">Aller directement au contenu</a>
+
     <!-- CONTENU PRINCIPAL -->
     <main id="contenu" class="site-main">
-      
-      <!-- Section d’introduction -->
       <section aria-labelledby="intro">
         <h2 id="intro" class="sr-only">Introduction</h2>
         <img
-          src="images/accueil-vintage.jpg"
+          src="images/accueil-vintage.png"
           alt="Silhouette d’une voiture ancienne"
           class="img-float-droite"
           width="340"
@@ -43,14 +44,12 @@
           Bienvenue ! Ce site explore <strong>l’évolution de l’automobile</strong>, les
           <strong>cultures</strong> qui l’entourent et les
           <strong>technologies / actualités</strong> qui transforment le secteur.
-          Notre objectif : des explications <em>claires</em>,
-          <em>visuelles</em> et <em>agréables à parcourir</em>.
+          Notre objectif : des explications <em>claires</em>, <em>visuelles</em> et <em>agréables à parcourir</em>.
         </p>
       </section>
 
-      <!-- Comment naviguer -->
       <section aria-labelledby="nav">
-        <h2 id="nav">Comment naviguer</h2>
+        <h2 id="nav" class="h2-alt">Comment naviguer</h2>
         <ul>
           <li><strong>Accueil</strong> — Vue d’ensemble et conseils de navigation.</li>
           <li>
@@ -63,28 +62,26 @@
           </li>
           <li>
             <strong><a href="cultures.html">Cultures</a></strong> —
-            Scènes et communautés (JDM : culture japonaise, rallye, F1, youngtimers…).
+            Scènes et communautés (JDM, rallye, F1, youngtimers…).
           </li>
           <li>
             <strong><a href="actualite.html">Technologies / Actus</a></strong> —
-            Électrification, ADAS (assistances), logiciels, matériaux, tendances.
+            Électrification, ADAS, logiciels, matériaux, tendances.
             <span class="clair">(signets haut/bas disponibles)</span>
           </li>
         </ul>
       </section>
 
-      <!-- Ce que vous allez trouver -->
       <section aria-labelledby="trouver">
         <h2 id="trouver">Ce que vous allez trouver</h2>
         <ul>
           <li><strong>Repères clairs</strong> : titres lisibles, rubriques synthétiques, images commentées.</li>
           <li><strong>Exemples concrets</strong> : modèles emblématiques, événements, objets/symboles.</li>
-          <li><strong>Vulgarisation</strong> : définitions simples, mini-glossaire au besoin (ex. JDM, ADAS).</li>
+          <li><strong>Vulgarisation</strong> : définitions simples, mini-glossaire au besoin.</li>
           <li><strong>Images sourcées</strong> : liste complète des sources dans <a href="a-propos.html">À propos</a>.</li>
         </ul>
       </section>
 
-      <!-- Parcours conseillé -->
       <section aria-labelledby="parcours">
         <h2 id="parcours">Par où commencer ?</h2>
         <ol>
@@ -95,28 +92,28 @@
         <p class="clair">Astuce : la page “Technologies / Actus” est la plus dynamique.</p>
       </section>
 
-      <!-- Focus local -->
       <section aria-labelledby="local">
         <h2 id="local">Autour de nous</h2>
-        <p>
-          Rassemblements / événements auto à proximité (étudiants, clubs, salons).<br />
-          <em>Ajoutez ici des dates et lieux si vous en avez ; sinon, complétez plus tard.</em>
-        </p>
+        <ul>
+          <li><strong>Cars &amp; Coffee — Montréal</strong> : dim. 23 nov., 9h–12h, Marché Central.</li>
+          <li><strong>Club Rallye UdeM</strong> : sortie gravel — sam. 6 déc., 10h, Mont-St-Hilaire.</li>
+          <li><strong>Salon de l’auto de Montréal</strong> : 17–26 janv., Palais des congrès.</li>
+        </ul>
       </section>
 
       <p>
-        Pour nos choix de design, d’accessibilité et la liste des sources d’images,
+        Pour nos choix de design et la liste des sources d’images,
         rendez-vous sur <a href="a-propos.html">À propos</a>.
       </p>
     </main>
 
-    <!--  PIED DE PAGE  -->
+    <!-- FOOTER -->
     <footer class="site-footer">
       <p>
-        <strong>Tahfi Hamza</strong> &amp; <strong>Jackson Ho</strong> —
-        Dernière mise à jour :
+        <strong>Tahfi Hamza</strong> &amp; <strong>Jackson Ho</strong> — Dernière mise à jour :
         <time datetime="2025-11-05">5 novembre 2025</time>
       </p>
+      <span class="badge-css" aria-label="Badge CSS des auteurs">TJ</span>
     </footer>
   </body>
 </html>
