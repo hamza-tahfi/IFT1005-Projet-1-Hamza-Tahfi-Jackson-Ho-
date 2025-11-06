@@ -7,94 +7,116 @@
     <title>Motorscape - Accueil</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="page-accueil">
-    <a class="skip-link" href="#contenu">Aller au contenu</a>
 
+  <body class="page-accueil">
+    <!-- HEADER -->
     <header class="site-header">
-      <img src="images/logo.png" alt="Logo du site" class="logo" />
-      <h1>Culture automobile</h1>
       <nav class="site-nav" aria-label="Navigation principale">
+        <!-- Logo cliquable renvoyant vers l'accueil -->
+        <a href="index.html" class="brand" aria-label="Accueil Motorscape">
+          <img src="images/logo.png" alt="Logo du site" class="logo" />
+        </a>
+
+        <!-- Liens de navigation -->
         <a class="actif" href="index.html">Accueil</a>
         <a href="histoire.html">Histoire</a>
         <a href="cultures.html">Cultures</a>
         <a href="actualite.html">Technologies / Actus</a>
-        <a href="a_propos.html">À propos</a>
+        <a href="a-propos.html">À propos</a>
       </nav>
     </header>
 
+    <!-- CONTENU PRINCIPAL -->
     <main id="contenu" class="site-main">
+      
+      <!-- Section d’introduction -->
+      <section aria-labelledby="intro">
+        <h2 id="intro" class="sr-only">Introduction</h2>
+        <img
+          src="images/accueil-vintage.jpg"
+          alt="Silhouette d’une voiture ancienne"
+          class="img-float-droite"
+          width="340"
+          height="220"
+        />
+        <p>
+          Bienvenue ! Ce site explore <strong>l’évolution de l’automobile</strong>, les
+          <strong>cultures</strong> qui l’entourent et les
+          <strong>technologies / actualités</strong> qui transforment le secteur.
+          Notre objectif : des explications <em>claires</em>,
+          <em>visuelles</em> et <em>agréables à parcourir</em>.
+        </p>
+      </section>
 
-  <main id="contenu" class="site-main">
-    <!-- Intro + image flottante -->
-    <section aria-labelledby="intro">
-      <h2 id="intro" class="sr-only">Introduction</h2>
-      <img
-        src="images/accueil-vintage.jpg"
-        alt="Silhouette d’une voiture ancienne"
-        class="img-float-droite"
-        width="340" height="220">
+      <!-- Comment naviguer -->
+      <section aria-labelledby="nav">
+        <h2 id="nav">Comment naviguer</h2>
+        <ul>
+          <li><strong>Accueil</strong> — Vue d’ensemble et conseils de navigation.</li>
+          <li>
+            <strong><a href="a-propos.html">À propos</a></strong> —
+            Public visé, choix de design, accessibilité, <em>sources d’images</em>.
+          </li>
+          <li>
+            <strong><a href="histoire.html">Histoire</a></strong> —
+            Grandes étapes : inventions, design, sécurité, environnement.
+          </li>
+          <li>
+            <strong><a href="cultures.html">Cultures</a></strong> —
+            Scènes et communautés (JDM : culture japonaise, rallye, F1, youngtimers…).
+          </li>
+          <li>
+            <strong><a href="actualite.html">Technologies / Actus</a></strong> —
+            Électrification, ADAS (assistances), logiciels, matériaux, tendances.
+            <span class="clair">(signets haut/bas disponibles)</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Ce que vous allez trouver -->
+      <section aria-labelledby="trouver">
+        <h2 id="trouver">Ce que vous allez trouver</h2>
+        <ul>
+          <li><strong>Repères clairs</strong> : titres lisibles, rubriques synthétiques, images commentées.</li>
+          <li><strong>Exemples concrets</strong> : modèles emblématiques, événements, objets/symboles.</li>
+          <li><strong>Vulgarisation</strong> : définitions simples, mini-glossaire au besoin (ex. JDM, ADAS).</li>
+          <li><strong>Images sourcées</strong> : liste complète des sources dans <a href="a-propos.html">À propos</a>.</li>
+        </ul>
+      </section>
+
+      <!-- Parcours conseillé -->
+      <section aria-labelledby="parcours">
+        <h2 id="parcours">Par où commencer ?</h2>
+        <ol>
+          <li><strong>Histoire</strong> — Situer les grandes évolutions.</li>
+          <li><strong>Cultures</strong> — Comprendre les scènes et communautés.</li>
+          <li><strong>Technologies / Actus</strong> — Voir <em>ce qui change aujourd’hui</em>.</li>
+        </ol>
+        <p class="clair">Astuce : la page “Technologies / Actus” est la plus dynamique.</p>
+      </section>
+
+      <!-- Focus local -->
+      <section aria-labelledby="local">
+        <h2 id="local">Autour de nous</h2>
+        <p>
+          Rassemblements / événements auto à proximité (étudiants, clubs, salons).<br />
+          <em>Ajoutez ici des dates et lieux si vous en avez ; sinon, complétez plus tard.</em>
+        </p>
+      </section>
+
       <p>
-        Bienvenue ! Ce site explore <strong>l’évolution de l’automobile</strong>, les
-        <strong>cultures</strong> qui l’entourent et les <strong>technologies / actualités</strong>
-        qui transforment le secteur. Notre objectif : des explications <em>claires</em>,
-        <em>visuelles</em> et <em>agréables à parcourir</em>.
+        Pour nos choix de design, d’accessibilité et la liste des sources d’images,
+        rendez-vous sur <a href="a-propos.html">À propos</a>.
       </p>
-    </section>
+    </main>
 
-    <!-- Comment naviguer -->
-    <section aria-labelledby="nav">
-      <h2 id="nav">Comment naviguer</h2>
-      <ul>
-        <li><strong>Accueil</strong> — Vue d’ensemble et conseils de navigation.</li>
-        <li><strong><a href="a-propos.html">À propos</a></strong> — Public visé, choix de design, accessibilité, <em>sources d’images</em>.</li>
-        <li><strong><a href="histoire.html">Histoire</a></strong> — Grandes étapes : inventions, design, sécurité, environnement.</li>
-        <li><strong><a href="cultures.html">Cultures</a></strong> — Scènes et communautés (JDM : culture japonaise, rallye, F1, youngtimers…).</li>
-        <li><strong><a href="techno-actus.html">Technologies / Actus</a></strong> — Électrification, ADAS (assistances), logiciels, matériaux, tendances.
-            <span class="clair">(signets haut/bas disponibles)</span></li>
-      </ul>
-    </section>
-
-    <!-- Ce que vous allez trouver -->
-    <section aria-labelledby="trouver">
-      <h2 id="trouver">Ce que vous allez trouver</h2>
-      <ul>
-        <li><strong>Repères clairs</strong> : titres lisibles, rubriques synthétiques, images commentées.</li>
-        <li><strong>Exemples concrets</strong> : modèles emblématiques, événements, objets/symboles.</li>
-        <li><strong>Vulgarisation</strong> : définitions simples, mini-glossaire au besoin (ex. JDM, ADAS).</li>
-        <li><strong>Images sourcées</strong> : liste complète des sources dans <a href="a-propos.html">À propos</a>.</li>
-      </ul>
-    </section>
-
-    <!-- Parcours conseillé -->
-    <section aria-labelledby="parcours">
-      <h2 id="parcours">Par où commencer ?</h2>
-      <ol>
-        <li><strong>Histoire</strong> — Situer les grandes évolutions.</li>
-        <li><strong>Cultures</strong> — Comprendre les scènes et communautés.</li>
-        <li><strong>Technologies / Actus</strong> — Voir <em>ce qui change aujourd’hui</em>.</li>
-      </ol>
-      <p class="clair">Astuce : la page “Technologies / Actus” est la plus dynamique.</p>
-    </section>
-
-    <!-- Focus local (facultatif) -->
-    <section aria-labelledby="local">
-      <h2 id="local">Autour de nous</h2>
+    <!--  PIED DE PAGE  -->
+    <footer class="site-footer">
       <p>
-        Rassemblements/événements auto à proximité (étudiants, clubs, salons).
-        <em>Ajoutez ici des dates et lieux si vous en avez ; sinon, complétez plus tard.</em>
+        <strong>Tahfi Hamza</strong> &amp; <strong>Jackson Ho</strong> —
+        Dernière mise à jour :
+        <time datetime="2025-11-05">5 novembre 2025</time>
       </p>
-    </section>
-
-    <p>
-      Pour nos choix de design, d’accessibilité et la liste des sources d’images,
-      rendez-vous sur <a href="a-propos.html">À propos</a>.
-    </p>
-  </main>
-
-  <footer class="site-footer">
-    <p><strong>Tahfi Hamza</strong> &amp; <strong>Jackson Ho</strong> — Dernière mise à jour :
-    <time datetime="2025-11-05">5 novembre 2025</time>
-    </p>
-  </footer>
+    </footer>
   </body>
 </html>
