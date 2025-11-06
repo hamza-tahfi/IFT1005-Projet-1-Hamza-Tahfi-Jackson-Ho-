@@ -188,3 +188,55 @@ a:hover{ color:#1F2C34; }
   }
   .history-center-container::after{ display:none; }
 }
+
+/* News and Technology Page */
+.article-container {
+  padding-top: 100px;
+  background-color: white;
+  margin: auto;
+  max-width: 80%;
+  border-radius: 5px;
+}
+
+.article {
+  display: flex;
+}
+
+.article-text {
+  padding: 20px;
+  padding-right: 10%;
+}
+
+.article img {
+  width: 40%;
+  height: auto;
+  margin: 10px;
+  box-shadow: 5px 5px 10px lightgray;
+  border-radius: 5px;
+  object-fit: cover; /* https://stackoverflow.com/questions/16177707/avoid-stretch-on-image-css */
+}
+
+.article p, h2, h3{
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.bottom-articles-container {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+}
+
+.bottom-articles-container .article {
+  flex-direction: column;
+  flex: 1;
+  margin: 10px;
+}
+
+.bottom-articles-container img {
+  width: 90%;
+  height: auto;
+  margin: auto;
+}
