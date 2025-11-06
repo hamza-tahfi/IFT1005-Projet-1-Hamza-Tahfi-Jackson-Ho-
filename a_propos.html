@@ -7,22 +7,27 @@
     <title>Nom - À propos</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body class="page-a-propos">
     <a class="skip-link" href="#contenu">Aller au contenu</a>
 
+  <!-- En-tête du site -->
     <header class="site-header">
       <img src="images/logo.png" alt="Logo du site" class="logo" />
       <h1>À propos</h1>
+
       <nav class="site-nav" aria-label="Navigation principale">
         <a href="index.html">Accueil</a>
         <a href="histoire.html">Histoire</a>
-        <a href="cultures.html">Cultures</a>
+        <a href="culture.html">Cultures</a>
         <a href="actualite.html">Technologies / Actus</a>
         <a class="actif" href="a_propos.html">À propos</a>
       </nav>
     </header>
 
+<!-- Contenu principal -->
     <main id="contenu" class="site-main">
+
     <section aria-labelledby="public-vise">
       <h2 id="public-vise">Public visé</h2>
       <p>
@@ -37,7 +42,7 @@
       <h2 id="objectifs">Objectifs</h2>
       <ul>
         <li><strong>Informer</strong> sur l’histoire et les cultures automobiles, sans jargon inutile.</li>
-        <li><strong>Illustrer</strong> avec des images pertinentes et des exemples concrets.</li>
+        <li><strong>Illustrer</strong> à l’aide d’images pertinentes et d’exemples concrets.</li>
         <li><strong>Accompagner</strong> la navigation avec des repères visuels cohérents (titres, listes, images).</li>
         <li><strong>Respecter</strong> les bonnes pratiques du cours (structure, contenu, orthographe).</li>
       </ul>
@@ -45,29 +50,31 @@
 
     <section aria-labelledby="design">
       <h2 id="design">Choix de design (couleurs, typographies, hiérarchie)</h2>
-      <h3>Palette &amp; contraste</h3>
+
+      <h3>Palette et contraste</h3>
       <p>
-        Palette <strong>sobre et lisible</strong> : fond clair, texte #1a1a1a, liens bleu/gris.
+        Palette <strong>sobre et lisible</strong> : fond clair, texte foncé (#1a1a1a), 
+        et liens bleu/gris. 
         Le menu change <strong>nettement au survol</strong> pour signaler l’interaction.
       </p>
+
       <h3>Typographies &amp; hiérarchie</h3>
       <ul>
-        <li><strong>Titres</strong> : police à empattements pour les H2 (contraste visuel).</li>
-        <li><strong>Texte courant</strong> : sans-serif avec interligne 1.5 pour la lisibilité.</li>
-        <li><strong>Hiérarchie</strong> : H1 &gt; H2 &gt; paragraphes/listes, marges régulières et tailles cohérentes.</li>
+        <li><strong>Titres</strong> : police avec empattements pour distinguer les sections.</li>
+        <li><strong>Texte courant</strong> : police sans empattements, interligne 1.5 pour la lisibilité.</li>
+        <li><strong>Hiérarchie</strong> : H1 &gt; H2 &gt; paragraphes/liste, marges et tailles cohérentes.</li>
       </ul>
     </section>
 
     <section aria-labelledby="structure">
       <h2 id="structure">Disposition &amp; navigation</h2>
       <p>
-        Chaque page reprend le même squelette : <em>header</em> (H1 + <strong>logo flottant</strong>),
-        menu de navigation, <em>main</em> (contenu de la page) et <em>footer</em> (noms en gras + date).
-        La navigation est commune aux 5 pages, avec page active indiquée et survol visible.
+        Chaque page reprend la même structure : 
+        <em>header</em> (H1 + <strong>logo flottant</strong>), menu de navigation, <em>main</em> (contenu de la page) et <em>footer</em> (noms en gras + date). 
+        La navigation est identique sur toutes les pages, avec la page active clairement indiquée.
       </p>
       <p>
-        Mise en page volontairement <strong>basique</strong> (HTML/CSS du cours), sans tableaux ni formulaires,
-        et sans multi-colonnes avancées : priorité à la clarté et à la conformité.
+        Mise en page volontairement <strong>simple</strong>. L’objectif est la clarté et la conformité.
       </p>
     </section>
 
@@ -94,9 +101,11 @@
       <h2 id="coherence">Cohérence inter-pages &amp; exigences</h2>
       <ul>
         <li>Un <strong>seul fichier CSS</strong> commun (palette, titres, espacements, composants).</li>
-        <li>Rappels globaux : ≥ 3 images au total (≥ 1 <em>circulaire</em>), au moins 1 liste numérotée + sous-liste d’un autre type,
-            <strong>deux H2</strong> avec styles distincts, <em>signets haut/bas</em> dans la page la plus longue,
-            <em>badge CSS-only</em>, et une <em>figure SVG</em> originale.</li>
+        <li>Rappels : au moins trois images (dont une <em>circulaire</em>), 
+            une liste numérotée avec une sous-liste, 
+            <strong>deux H2</strong> stylisés différemment, 
+            <em>signets haut/bas</em>, <em>badge CSS-only</em> 
+            et une <em>figure SVG</em> originale.</li>
       </ul>
     </section>
 
@@ -104,17 +113,20 @@
       <h2 id="sources-titre">Sources des images</h2>
       <p>Liste non numérotée des sources Web (pas « Google Images »). Ajoutez les URL exactes :</p>
       <ul class="sources-images">
-        <li><a href="https://i0.wp.com/transportgeography.org/wp-content/uploads/assembly_line_ford_t.jpg?w=1280&ssl=1">Ligne d'assemblé de véhicule Ford T</a></li>
-          <li><a href="https://www.fhwa.dot.gov/highwayhistory/moment/images/lbjlibrary.org_2.jpg">Adoption de la loi National Traffic and Motor Vehicle Safety Act en 1966</a></li>
-          <li><a href="https://s1.cdn.autoevolution.com/images/news/eunos-cosmo-a-look-back-at-the-forgotten-three-rotor-jdm-legend-222530-7.jpg">Image de la Mazda Eunos Cosmo</a></li>
-          <li><a href="https://upload.wikimedia.org/wikipedia/commons/c/c5/EV1A014_%281%29_cropped.jpg">Image de l'EV1</a></li>
-          <li><a href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/1998_Toyota_Prius_NHW10_Silver_Strara_Metallic_%28front%29.jpg/1200px-1998_Toyota_Prius_NHW10_Silver_Strara_Metallic_%28front%29.jpg">Toyota Prius</a></li>
+        <!-- Exemple :
+        <li>Photo du rallye — 
+          <a href="https://exemple.com/photo" target="_blank" rel="noopener">Nom du site</a>
+        </li>
+        -->
+        <li>—</li>
       </ul>
     </section>
+
     </main>
+
   <footer class="site-footer">
-    <p><strong>Tahfi Hamza</strong> & <strong>Jackson Ho</strong> — Dernière mise à jour :
-      <time datetime="2025-11-02">2 novembre 2025</time>
+    <p><strong>Tahfi Hamza</strong> &amp; <strong>Jackson Ho</strong> — Dernière mise à jour :
+    <time datetime="2025-11-05">5 novembre 2025</time>
     </p>
   </footer>
   </body>
