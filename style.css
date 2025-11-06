@@ -1,6 +1,6 @@
 /* =========================================================
    Étudiants : Tahfi Hamza (20337357) / Jackson Ho
-   Fichier CSS unique – Motorscape
+   Fichier CSS unique – Motorscape (version corrigée)
    ========================================================= */
 
 /* Polices Google */
@@ -9,120 +9,136 @@
 /* Base & typos */
 html, body { margin: 0; padding: 0; }
 body{
-  background-color: #F1E6D2;                    /* FOND CRÈME partout */
+  background-color: #F1E6D2;         /* fond crème */
   color: #141414;
   font-family: Lato, "Open Sans", Roboto, system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
   line-height: 1.6;
 }
-img{ max-width:100%; height:auto; }
+
+/* ⚠️ N'affecte plus le logo avec un style d'image global */
+.site-main img,
+.article img,
+.history-image { 
+  max-width: 100%;
+  height: auto;
+}
 
 /* Titres */
 h1, h2, h3, h4{
   font-family: Oswald, "Bebas Neue", Impact, "Haettenschweiler", "Arial Narrow", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: #1F2C34;                               /* navy */
+  color: #1F2C34;
   margin-top: 0;
 }
 
-/* Main wrapper */
-.site-main { background-color: #F1E6D2; }       /* ancien : lightgray */
+/* Wrapper principal */
+.site-main { background-color: #F1E6D2; }
 
-/* NAVIGATION */
-.site-nav {
-  height: 100px;
-  background-color: #1F2C34;                    /* navy */
-  border: 0;                                    /* enlève cadre noir */
+/* ======================= HEADER & NAV ======================= */
+.site-header{
+  background-color: #1F2C34;         /* navy */
+  color: #F1E6D2;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  gap: 4px;
+  gap: 16px;
+  padding: 10px 16px;
+  flex-wrap: wrap;                    /* passe en 2 lignes en mobile */
   box-shadow: 0 8px 20px rgba(0,0,0,.15);
 }
 
-/* Liens */
-.site-nav a {
-  font-size: larger;
-  font-weight: bold;
-  height: 100%;
-  min-width: 20%;
-  align-content: center;
-  text-align: center;
-  padding: 0;
-  color: #F1E6D2;                                /* TEXTE CRÈME */
-  background-color: transparent;                 /* pas de blanc */
-  border-right: 0;                               
-  inline-size: 150px;
+/* Logo (désolidarisé des autres images) */
+.logo{
+  height: 48px;                       /* taille cohérente */
+  width: auto;
+  max-width: none;                    /* annule tout max-width global */
+  display: block;
+}
+
+/* Titre éventuel dans le header (pages Histoire/Techno) */
+.site-header h1{
+  margin: 0;
+  color: #F1E6D2;
+  font-size: clamp(1.25rem, 1.4rem + 1vw, 1.8rem);
+  line-height: 1.2;
+}
+
+/* Navigation principale */
+.site-nav{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;                  /* pousse la nav à droite */
+  flex-wrap: wrap;                    /* évite disparition des liens */
+}
+
+/* Liens de nav : on supprime les largeurs rigides qui cassaient le layout */
+.site-nav a{
+  color: #F1E6D2;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 10px 12px;
+  border-bottom: 3px solid transparent;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-bottom: 3px solid transparent;          /* indicateur actif */
+  /* SUPPRIMÉS : height:100%; min-width:20%; inline-size:150px; */
 }
 
 .site-nav a:hover,
 .site-nav a:focus,
-.site-nav a.actif {
-  color: #F1E6D2;                                /* reste crème → ne disparaît pas */
-  background-color: transparent;                 
-  border-bottom-color: #B8492D;                  /* brique */
+.site-nav a.actif{
+  color: #F1E6D2;
+  border-bottom-color: #B8492D;       /* brique */
   text-decoration: underline;
 }
+.site-nav a:hover.actif{ border-bottom-color:#8f3721; }
 
-/* Etat hover+actif */
-.site-nav a:hover.actif { border-bottom-color: #8f3721; }
-
-/* Histoire */
-.history-container, .history-header  {
-  background-color: transparent;                 /* laisse voir le fond crème */
+/* ======================= HISTOIRE ======================= */
+.history-container, .history-header{
+  background-color: transparent;
   margin: auto;
-  width: 80%;
+  width: min(1100px, 80%);
 }
-.history-header  { padding-top: 20px; }
+.history-header{ padding-top: 20px; }
 
-.history-header-title {
+.history-header-title{
   padding: 10px;
-  border: 1px solid #DFD8C9;                     /* bord doux */
+  border: 1px solid #DFD8C9;
   border-radius: 12px;
-  margin-left: 10%;
-  margin-right: 10%;
-  background-color: #FAF6EE;                     /* panneau clair */
+  margin-inline: 10%;
+  background-color: #FAF6EE;
   color: #1F2C34;
   box-shadow: 0 6px 16px rgba(20,20,20,.06);
 }
 
-.history-timeline-element {
+.history-timeline-element{
   display: flex;
   align-items: center;
-  align-content: center;
-  height: 300px;
   gap: 12px;
   padding: 8px 0;
+  min-height: 300px;
 }
 
 .history-left-container,
-.history-right-container {
+.history-right-container{
   width: 50%;
-  height: 100%;
   align-content: center;
 }
-.history-left-container { padding-left: 10px; padding-right: 5px; }
-.history-right-container{ padding-left: 5px;  padding-right: 10px; }
+.history-left-container { padding: 0 5px 0 10px; }
+.history-right-container{ padding: 0 10px 0 5px; }
 
 /* Barre centrale brique */
-.history-center-container {
+.history-center-container{
   width: 10px;
-  height: 100%;
-  margin-left: 10px;
-  margin-right: 10px;
-  border-left: 0;
-  border-right: 0;
   position: relative;
+  margin: 0 10px;
 }
 .history-center-container::before{
   content:"";
   position:absolute; inset:0;
-  width: 4px; margin-left:auto; margin-right:auto;
-  background:#B8492D;                             /* brique */
+  width: 4px; margin: 0 auto;
+  background:#B8492D;
   border-radius: 2px;
 }
 .history-center-container::after{
@@ -130,19 +146,17 @@ h1, h2, h3, h4{
   position:absolute; left:50%; transform:translateX(-50%);
   top: 10px; width:10px; height:10px; border-radius:50%;
   background:#B8492D;
-  box-shadow: 0 0 0 3px #F1E6D2;                  /* halo crème */
+  box-shadow: 0 0 0 3px #F1E6D2;
 }
 
-.history-image {
-  height: auto;
+.history-image{
   width: 60%;
-  padding-top: 10px;
-  padding-left: 25%;
+  margin-left: 20%;
   border-radius: 12px;
   box-shadow: 0 6px 16px rgba(20,20,20,.06);
 }
 
-.history-text {
+.history-text{
   background-color: #FAF6EE;
   border: 1px solid #DFD8C9;
   border-radius: 12px;
@@ -150,97 +164,93 @@ h1, h2, h3, h4{
   color: #141414;
   box-shadow: 0 6px 16px rgba(20,20,20,.06);
 }
+.history-text p{ padding: 15px; }
 
-.history-text p {
-  padding: 15px;
-}
-
-.history-timeline-footer {
-  height: 100%;
+.history-timeline-footer{
   width: 100%;
   text-align: center;
   font-weight: bold;
   font-size: larger;
   color: #1F2C34;
 }
-.history-timeline-footer svg { overflow: visible; }
-.history-timeline-footer p {
+.history-timeline-footer svg{ overflow: visible; }
+.history-timeline-footer p{
   border: 1px solid #DFD8C9;
   border-radius: 999px;
-  margin-right: 45%;
-  margin-left: 45%;
-  margin-top: 50px;
+  margin: 50px auto 0;
   padding: 6px 12px;
   background: linear-gradient(#FFFFFF, #FAF6EE);
   box-shadow: 0 6px 16px rgba(20,20,20,.06);
+  width: fit-content;
 }
 
-/* Liens généraux */
+/* ======================= LIENS GÉNÉRAUX ======================= */
 a{ color:#B8492D; }
 a:hover{ color:#1F2C34; }
 
-/* Responsive simple */
-@media (max-width: 900px){
-  .history-timeline-element{ flex-wrap: wrap; height: auto; }
-  .history-left-container,
-  .history-right-container{ width: 100%; padding: 0; order: 2; }
-  .history-center-container{
-    order:1; width:100%; height:12px; margin:8px 0 16px;
-  }
-  .history-center-container::before{
-    height:4px; width:100%; left:0; right:0; top:50%; transform:translateY(-50%);
-  }
-  .history-center-container::after{ display:none; }
-}
-
-/* News and Technology Page */
-.article-container {
-  padding-top: 100px;
-  background-color: white;
+/* ======================= TECHNO / ACTUS ======================= */
+.article-container{
+  background-color: #fff;
   margin: auto;
-  max-width: 80%;
-  border-radius: 5px;
+  max-width: min(1100px, 80%);
+  border-radius: 8px;
+  padding-bottom: 24px;
 }
 
-.article {
-  display: flex;
-}
+.article{ display: flex; gap: 10px; align-items: flex-start; }
 
-.article-text {
-  padding: 20px;
-  padding-right: 10%;
-}
+.article-text{ padding: 20px; padding-right: 10%; }
 
-.article img {
+.article img{
   width: 40%;
   height: auto;
   margin: 10px;
   box-shadow: 5px 5px 10px lightgray;
   border-radius: 5px;
-  object-fit: cover; /* https://stackoverflow.com/questions/16177707/avoid-stretch-on-image-css */
+  object-fit: cover;
 }
 
-.article p, h2, h3{
+.article p, .article h2, .article h3{
   padding-top: 10px;
   padding-left: 15px;
   padding-right: 15px;
 }
 
-.bottom-articles-container {
-  padding-top: 50px;
+.bottom-articles-container{
+  padding-top: 32px;
   display: flex;
   flex-direction: row;
-  align-items: start;
+  align-items: stretch;
+  gap: 10px;
 }
 
-.bottom-articles-container .article {
+.bottom-articles-container .article{
   flex-direction: column;
   flex: 1;
-  margin: 10px;
+  margin: 0;
 }
 
-.bottom-articles-container img {
+.bottom-articles-container img{
   width: 90%;
   height: auto;
-  margin: auto;
+  margin: 0 auto;
+}
+
+/* ======================= RESPONSIVE ======================= */
+@media (max-width: 900px){
+  .site-header{ gap: 10px; }
+  .logo{ height: 40px; }
+  .site-nav{ width: 100%; margin-left: 0; }  /* nav passe sous le logo/titre */
+  
+  .history-timeline-element{ flex-wrap: wrap; min-height: unset; }
+  .history-left-container,
+  .history-right-container{ width: 100%; padding: 0; order: 2; }
+  .history-center-container{ order:1; width:100%; height:12px; margin:8px 0 16px; }
+  .history-center-container::before{
+    height:4px; width:100%; left:0; right:0; top:50%; transform:translateY(-50%);
+  }
+  .history-center-container::after{ display:none; }
+
+  .article{ flex-direction: column; }
+  .article img{ width: 100%; margin: 0; }
 }
